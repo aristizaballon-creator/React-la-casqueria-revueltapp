@@ -84,7 +84,6 @@ return (
         {producto.cantidad}
         </span>
 
-        {/* Botón de Agregar */}
         <button 
         onClick={agregarAlCarrito} 
         style={{
