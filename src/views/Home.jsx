@@ -17,28 +17,23 @@ const datosSimuladosIniciales = [
 
 const Home = () => {
 
-// El estado ahora controla los productos y sus cantidades individuales
 const [productos, setProductos] = useState(datosSimuladosIniciales);
 
-  // 2. Nueva función centralizada que recibe el ID del producto y cuánto sumar/restar
 const cambiarCantidad = (id, incremento) => {
     setProductos(productos.map(producto => {
-      // Si encontramos el producto que el usuario clickeó...
     if (producto.id === id) {
         const nuevaCantidad = producto.cantidad + incremento;
-        // Retornamos el producto actualizado, asegurándonos de que no baje de 0
         return { ...producto, cantidad: nuevaCantidad >= 0 ? nuevaCantidad : 0 };
     }
     return producto;
     }));
 };
 
-  // Manejador simple para agregar 1 unidad al producto (usado por el componente Producto)
 const manejarAgregarAlCarrito = (id) => {
     cambiarCantidad(id, 1);
 };
 
-  // 3. Calculamos el total sumando las cantidades individuales de todos los productos
+
 const totalCarrito = productos.reduce((total, producto) => total + producto.cantidad, 0);
 
 return (
