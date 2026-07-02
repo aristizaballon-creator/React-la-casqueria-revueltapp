@@ -1,0 +1,45 @@
+:root {
+  --tinta: #15201B;
+  --pino: #1F5E4A;
+  --musgo: #3E9C7A;
+  --calendula: #F2A03D;
+  --arcilla: #E8643D;
+  --papel: #F6F2E9;
+  --papel2: #EFE9DC;
+  --linea: #DED8C5;
+
+  --fuente-titulares: 'Fraunces', serif;
+  --fuente-cuerpo: 'Plus Jakarta Sans', sans-serif;
+  --fuente-tecnica: 'Space Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--papel); 
+  color: var(--tinta); 
+  font-family: var(--fuente-cuerpo); 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--fuente-titulares); 
+  font-weight: 600; 
+}
+
+
+.tarjeta-interactiva {
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.tarjeta-interactiva:hover {
+
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
